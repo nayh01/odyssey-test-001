@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 점심 투표 - Lunch Vote</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h1 class="logo">Lunch <span>Vote</span></h1>
+            <p class="subtitle">오늘 점심 뭐 먹을까요?</p>
+        </header>
+
+        <section class="menu-selection">
+            <div class="menu-grid">
+                <div class="menu-card" data-menu="bibimbap">
+                    <div class="img-wrapper">
+                        <img src="assets/bibimbap.png" alt="비빔밥">
+                    </div>
+                    <h3>비빔밥</h3>
+                    <div class="selection-indicator"></div>
+                </div>
+
+                <div class="menu-card" data-menu="donkatsu">
+                    <div class="img-wrapper">
+                        <img src="assets/donkatsu.png" alt="돈까스">
+                    </div>
+                    <h3>돈까스</h3>
+                    <div class="selection-indicator"></div>
+                </div>
+
+                <div class="menu-card" data-menu="gukbap">
+                    <div class="img-wrapper">
+                        <img src="assets/gukbap.png" alt="국밥">
+                    </div>
+                    <h3>국밥</h3>
+                    <div class="selection-indicator"></div>
+                </div>
+
+                <div class="menu-card" data-menu="salad">
+                    <div class="img-wrapper">
+                        <img src="assets/salad.png" alt="샐러드">
+                    </div>
+                    <h3>샐러드</h3>
+                    <div class="selection-indicator"></div>
+                </div>
+            </div>
+
+            <button id="vote-btn" class="vote-button" disabled>투표하기</button>
+        </section>
+
+        <section id="results-section" class="results-container">
+            <div class="results-header">
+                <h2>현재 투표 결과</h2>
+                <span id="total-count">총 0명 참여</span>
+            </div>
+            <div class="results-list" id="results-list">
+                <!-- Results will be injected here -->
+                <div class="result-item" data-menu="bibimbap">
+                    <div class="result-info">
+                        <span>비빔밥</span>
+                        <span class="count">0표 (0%)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="result-item" data-menu="donkatsu">
+                    <div class="result-info">
+                        <span>돈까스</span>
+                        <span class="count">0표 (0%)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="result-item" data-menu="gukbap">
+                    <div class="result-info">
+                        <span>국밥</span>
+                        <span class="count">0표 (0%)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="result-item" data-menu="salad">
+                    <div class="result-info">
+                        <span>샐러드</span>
+                        <span class="count">0표 (0%)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
