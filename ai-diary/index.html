@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 감정 일기</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+</head>
+<body>
+    <div class="diary-container">
+        <h1 class="title">오늘의 하루는 어땠나요?</h1>
+        
+        <div class="input-section">
+            <textarea id="diary-input" placeholder="오늘 있었던 일과 감정을 자유롭게 적어주세요..."></textarea>
+            
+            <div class="button-group">
+                <button class="btn btn-voice" id="btnVoice">
+                    🎙️ 음성으로 입력하기
+                </button>
+                <button class="btn btn-analyze" id="btnAnalyze">
+                    ✨ 분석 요청하기
+                </button>
+            </div>
+        </div>
+
+        <div class="response-section">
+            <h2 class="subtitle">AI의 답변</h2>
+            <div class="ai-response-box" id="aiResponse">
+                처음에는 여기에 AI의 답변이 표시됩니다.
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
